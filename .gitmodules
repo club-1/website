@@ -1,0 +1,3 @@
+[submodule "intranet/explorateur"]
+	path = intranet/explorateur
+	url = https://github.com/n-peugnet/phpFileExplorer

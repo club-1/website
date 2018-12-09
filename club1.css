@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'ibm';
+	src: url('Alien-Encounters-Italic.ttf');
+}
+@font-face {
+	font-family: 'ibm-solid';
+	src: url('Alien-Encounters-Solid-Italic.ttf');
+}
+@keyframes mouv1 {
+	0% {transform: translate3d(0,0,0);}
+	50% {transform: translate3d(-4px,-5px,0);}
+	100% {transform: translate3d(0,0,0);}
+}
+
+@keyframes mouv2 {
+	0% {transform: translate3d(0,0,0);}
+	50% {transform: translate3d(0,3px,0);}
+	100% {transform: translate3d(0,0,0);}
+}
+
+@keyframes opacite1 {
+	from {opacity: 1;}
+	to {opacity: .2;}
+}
+
+@keyframes opacite2 {
+	0% {opacity: .9;}
+	19% {opacity: 1;}
+	20% {opacity: .4;}
+	22% {opacity: 0;}
+	23% {opacity: 1;}
+	97% {opacity: .8;}
+	98% {opacity: 0;}
+	99% {opacity: .4;}
+	100% {opacity: .9;}
+}
+
+@keyframes opacite3 {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+body {
+	background-color: white;
+	overflow-x: hidden;
+}
+
+.degrade {
+	position: fixed;
+	top: 0;
+	width: 1000px;
+	height: 120%;
+	background: linear-gradient(to right, #d8d8d8 , #f7f7f7, #ffffff);
+	animation: opacite3 15s linear 10s forwards;
+	opacity: 0;
+}
+
+.imgtitre {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#layer1 {
+    /*animation-name: mouv1;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(.2,0,.7,1);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;*/
+	animation: mouv1 12s cubic-bezier(.2,0,.7,1) alternate infinite, opacite1 10s ease-in-out alternate infinite ;
+}
+
+#layer2 {
+    /*animation-name: mouv2;
+    animation-duration: 7.5s;
+    animation-timing-function: cubic-bezier(.2,.2,.3,1);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;*/
+	animation: mouv2 7.5s cubic-bezier(.2,.2,.3,1)alternate infinite, opacite2 3s linear alternate infinite ;
+}
+
+.titre {
+	display: none;
+}
+
+a, p, h1, h2, h3, label, input {
+	font-family: monospace;
+}
+
+a, p, label, input {
+	font-size: 14px;
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+}
+
+/*.liens a {
+	color: rgb(77, 77, 77);
+	text-decoration: none; 
+	font-family: ibm;
+	font-size: 37px;
+}
+
+.liens a:hover {
+	font-family: ibm-solid;
+}*/
+
+h1, h1 a {
+	color: rgb(77, 77, 77);
+	text-decoration: none;
+	font-size: 24px;
+}
+
+h1 a:hover {
+	color: black;
+	text-decoration: underline; 
+}
+
+h3 {
+	margin-bottom: 3px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.liens {
+	position: absolute;
+	right:5px;
+	bottom:3px;
+}
